@@ -1,6 +1,6 @@
 namespace TriangleTracker
 {
-  public class TriangleTracker
+  public class Triangle
   {
     // stuff
   }
