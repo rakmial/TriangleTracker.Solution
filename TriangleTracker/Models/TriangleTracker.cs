@@ -32,9 +32,17 @@ namespace TriangleTracker
         Console.WriteLine("No one side may be longer than the other two combined.");
         return "Invalid";
       }
+      else if (X == Y && Y == Z)
+      {
+        return "Equilateral";
+      }
+      else if (X != Y && Y != Z && Z != X)
+      {
+        return "Scalene";
+      }
       else
       {
-        return "";
+          return "Isosceles";
       }
     }
   }
