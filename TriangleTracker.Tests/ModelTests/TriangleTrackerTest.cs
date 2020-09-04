@@ -22,11 +22,17 @@ namespace TriangleTracker.Tests
     {
       Assert.AreEqual(3, testTriangle.Z);
     }
-    //[TestMethod]
-    //public void MethodTested_Behavior_ExpectedResult()
-    //{
-    //  // Test Assert.AreEqual(ExpectedResult, method to elicit ExpectedResult)
-    //}
+    [TestMethod]
+    public void ValidTriangle_AnyOneSideNotGreaterThanOtherTwoSum_True()
+    {
+      Assert.AreEqual(true, testTriangle.ValidTriangle);
+    }
+    [TestMethod]
+    public void ValidTriangle_AnyOneSideNotGreaterThanOtherTwoSum_False()
+    {
+      Triangle naughtyTriangle = new Triangle(1,2,218);
+      Assert.AreEqual(false, naughtyTriangle.ValidTriangle);
+    }
     //[TestMethod]
     //public void MethodTested_Behavior_ExpectedResult()
     //{
