@@ -25,13 +25,12 @@ namespace TriangleTracker.Tests
     [TestMethod]
     public void ValidTriangle_AnyOneSideNotGreaterThanOtherTwoSum_True()
     {
-      Assert.AreEqual(true, testTriangle.ValidTriangle);
+      Assert.AreEqual(true, testTriangle.ValidTriangle(3, 4, 5));
     }
     [TestMethod]
     public void ValidTriangle_AnyOneSideNotGreaterThanOtherTwoSum_False()
     {
-      Triangle naughtyTriangle = new Triangle(1,2,218);
-      Assert.AreEqual(false, naughtyTriangle.ValidTriangle);
+      Assert.AreEqual(false, testTriangle.ValidTriangle(3, 4, 543));
     }
     //[TestMethod]
     //public void MethodTested_Behavior_ExpectedResult()

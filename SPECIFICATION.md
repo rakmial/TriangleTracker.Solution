@@ -19,6 +19,6 @@ Write plain English spec descriptions first, including both an input and desired
 ### _Tests & Functions_
 
 * Class Triangle initializes with three integer side length values x, y, z, provides get for each.
-* Class Triangle provides internal bool method .validTriangle(x,y,z) which checks each combination (x+y)/z > 1, (y+z)/x > 1, (z+x)/y > 1, returns false if not.
-* .validTriangle is called at initialization on x, y, z inputs.
+* Class Triangle provides bool method .ValidTriangle(x,y,z) which checks each combination (x+y)/z > 1, (y+z)/x > 1, (z+x)/y > 1, returns false if not.
+* .ValidTriangle is called at initialization on x, y, z inputs.
 * Class Triangle exposes method .ofType() which returns a string "equilateral", "isosceles", or "scalene," depending on how many of the sides are equal.
