@@ -8,7 +8,10 @@ namespace TriangleTracker.Tests
   {
     Triangle testTriangle = new Triangle(1,2,3);
     Triangle naughtyTriangle = new Triangle(1,2,12);
-    
+    Triangle equilateralTriangle = new Triangle(3,3,3);
+    Triangle isoscelesTriangle = new Triangle(2,2,1);
+    Triangle scaleneTriangle = new Triangle(3,4,5);
+
     [TestMethod]
     public void InitInputsX_Get_X()
     {
@@ -39,10 +42,20 @@ namespace TriangleTracker.Tests
     {
       Assert.AreEqual("Invalid", naughtyTriangle.OfType());
     }
-    //[TestMethod]
-    //public void MethodTested_Behavior_ExpectedResult()
-    //{
-    //  // Test Assert.AreEqual(ExpectedResult, method to elicit ExpectedResult)
-    //}
+    [TestMethod]
+    public void OfType_ReturnsTriangleType_Equilateral()
+    {
+      Assert.AreEqual("Equilateral", equilateralTriangle.OfType());
+    }
+    [TestMethod]
+    public void OfType_ReturnsTriangleType_Isosceles()
+    {
+      Assert.AreEqual("Isosceles", isoscelesTriangle.OfType());
+    }
+    [TestMethod]
+    public void OfType_ReturnsTriangleType_Scalene()
+    {
+      Assert.AreEqual("Scalene", scaleneTriangle.OfType());
+    }
   }
 }
