@@ -1,3 +1,5 @@
+using System;
+
 namespace TriangleTracker
 {
   public class Triangle
@@ -20,6 +22,20 @@ namespace TriangleTracker
       bool valid3 = (Z + X) / Y >= 1;
 
       return valid1;
+    }
+
+    public string OfType()
+    {
+      if (!ValidTriangle(X, Y, Z))
+      {
+        Console.WriteLine("You have entered invalid side lengths for a triangle.");
+        Console.WriteLine("No one side may be longer than the other two combined.");
+        return "Invalid";
+      }
+      else
+      {
+        return "";
+      }
     }
   }
 }

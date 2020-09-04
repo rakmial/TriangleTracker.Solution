@@ -7,6 +7,8 @@ namespace TriangleTracker.Tests
   public class TriangleTrackerTests
   {
     Triangle testTriangle = new Triangle(1,2,3);
+    Triangle naughtyTriangle = new Triangle(1,2,12);
+    
     [TestMethod]
     public void InitInputsX_Get_X()
     {
@@ -23,14 +25,19 @@ namespace TriangleTracker.Tests
       Assert.AreEqual(3, testTriangle.Z);
     }
     [TestMethod]
-    public void ValidTriangle_AnyOneSideNotGreaterThanOtherTwoSum_True()
+    public void ValidTriangle_AnyOneSideNotGreaterThanOtherTwoSummed_True()
     {
       Assert.AreEqual(true, testTriangle.ValidTriangle(3, 4, 5));
     }
     [TestMethod]
-    public void ValidTriangle_AnyOneSideNotGreaterThanOtherTwoSum_False()
+    public void ValidTriangle_AnyOneSideNotGreaterThanOtherTwoSummed_False()
     {
       Assert.AreEqual(false, testTriangle.ValidTriangle(3, 4, 543));
+    }
+    [TestMethod]
+    public void OfType_ReturnsTriangleType_Invalid()
+    {
+      Assert.AreEqual("Invalid", naughtyTriangle.OfType());
     }
     //[TestMethod]
     //public void MethodTested_Behavior_ExpectedResult()
